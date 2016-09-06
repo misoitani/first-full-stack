@@ -1,0 +1,302 @@
+body {
+    /*    background-image: url(dark_embroidery/dark_embroidery.png);*/
+    background-color: black;
+    background-repeat: repeat;
+    background-position: center;
+    padding-bottom: 50%;
+    z-index: 1;
+    color: white;
+}
+
+#size {
+    font-size: 22px;
+    position: relative;
+    font-family: verdana;
+    display: inline-block;
+    z-index: 1;
+    color: ghostwhite;
+}
+
+#size a {
+    color: white;
+}
+
+#size li {
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    z-index: 1;
+}
+
+input {
+    /* line-height: normal; */
+    color: black;
+}
+
+
+/*//NEED TO DSPLY IT PROPERLY*/
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%;
+    margin: auto;
+}
+
+
+
+
+.nbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+/*    background-color: black;*/
+    font-size: 30px;
+}
+
+.all {
+    position: fixed;
+    bottom: 0%;
+}
+
+form {
+    position: fixed;
+    top: 10%;
+}
+/*
+
+.submit {
+*/
+/*
+    position: fixed;
+    object-position: center;
+    top: 10%;
+    width: 50%;
+    background-color: burlywood;
+    margin-left: 10%;
+}
+
+.jumbotron {
+    background: #358CCE;
+    color: #FFF;
+    border-radius: 0px;
+    position: fixed;
+    padding-top: 10px;
+    top: 20%;
+}
+
+.jumbotron-sm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0.1%;
+}
+
+.jumbotron small {
+    color: #FFF;
+    padding-top: 20px;
+    top: 20%;
+}
+
+.h1 small {
+    font-size: 24px;
+}
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
+.team {
+    padding: 75px 0;
+}
+
+h6.description {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+.profile {
+    margin-top: 25px;
+}
+
+.profile h1 {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px 0 0 0;
+}
+
+.profile h2 {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+.profile .img-box {
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+
+.profile .img-box:after {
+    content: "";
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.img-box ul {
+    position: absolute;
+    z-index: 2;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+    padding-left: 0px;
+    height: 0px;
+    margin: 0px;
+    opacity: 0;
+}
+
+.profile .img-box:after,
+.img-box ul,
+.img-box ul li {
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.img-box ul i {
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.img-box ul li {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #88C425;
+    margin: 2px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.img-box a {
+    color: #fff;
+}
+
+.img-box:hover:after {
+    opacity: 1;
+}
+
+.img-box:hover ul {
+    opacity: 1;
+}
+
+.img-box ul a {
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.img-box a:hover li {
+    border-color: #fff;
+    color: #88C425;
+}
+
+a {
+    color: #88C425;
+}
+
+/*
+a:hover {
+    text-decoration: none;
+    color: #519548;
+}
+*/
+/*
+
+i.red {
+    color: #BC0213;
+}
+*/
+
+
+/*.purple{ color:#C30083; }*/
+/*
+
+.blue {
+    color: #104BA9;
+}
+*/
+
+
+/*.orange{ color:#FFA200; }*/
+/*
+
+.green {
+    color: #AEF100;
+}
+*/
+
+/*
+.action {
+    margin: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
+    background-color: #D8D8D8;
+    border-radius: 3px;
+    border: 2px solid green;
+}
+
+.top {
+    position: fixed;
+    bottom: 20%;
+}
+
+.senddown {
+    top: 30%;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.nbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    font-size: 22px;
+}
+
+.nbar1 a {
+    color: white;
+    border-color: none;
+}
+*/
+
+/*
+.blog1 {
+    height: 650px;
+    background-color: black;
+    color: white;
+    border: 20px solid red;
+    width: 600px;
+    position: relative;
+    align-items: center;
+    table-layout: fixed;
+    margin-top: 111px;
+    margin-left: 30%;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+.blog1 h5 {
+    color: gray;
+    position: absolute;
+    bottom: 27px;
+}*/

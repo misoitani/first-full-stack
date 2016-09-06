@@ -1,0 +1,43 @@
+<div  ng-controller="tryItYourselfController" class="text-center">
+
+
+ 
+<h2>{{tryItYourself}}</h2>
+<h1> what country do you have in mind? </h1>
+
+</div>
+    
+       
+       <div  ng-controller="MainController" class="text-center">
+
+       
+       
+        <h1>Country's Name:</h1>
+        <input type="text" placeholder="type" ng-model="countryInput" />
+<br>
+        <button class="btn btn-primary btn-lg"  ng-click="getCountryonClick()">submit</button>
+<!--        <button ng-click="removeItem($index)">Remove</button>-->
+
+
+                <div ng-repeat="country in countries">
+                    <p>"NAME" :{{country.name}}</p>
+                    <p>"CAPITAL" :{{country.capital}}</p>
+                    <p>"POPULATION" :{{country.population}}</p>
+                    <p>"TIMEZONE" :{{country.timezones}}</p>
+                    <p>"BORDERS" :{{country.borders}}</p>
+                    <p>"LANGUAGES" :{{country.languages}}</p>           
+                </div>
+    </div>
+    
+    
+
+
+   
+
+
+
+
+
+
+
+

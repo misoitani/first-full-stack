@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RoutingApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CONNECTING CLASSROOMS</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <nav id="size" class="navbar navbar-inverse" role="navigation">
+        <li role="presentation" class="active"><a href="#/">HOME</a></li>
+        <li role="presentation"><a href="#/about">ABOUT OUR CLASS</a></li>
+        <li role="presentation"><a href="#/weAreGlobal">AROUND THE WORLD IN PICTURES</a></li>
+        <li role="presentation"><a href="#/tryItYourself">TRY IT YOURSELF</a></li>
+        <li role="presentation"><a href="#/team">TEAM</a></li>
+        <li role="presentation"><a href="#/leaveComment">LEAVE A COMMENT</a></li>
+<!--class="nav-link" href="team.html" target="_blank"-->
+    </nav>
+
+
+    <div ng-view></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+
+    <script src="app.js"></script>
+    <script src="templates/about.js"></script>
+    <script src="templates/home.js"></script>
+    <script src="templates/weAreGlobal.js"></script>
+    <script src="templates/tryItYourself.js"></script>
+    <script src="templates/team.js"></script>
+    <script src="templates/leaveComment.js"></script>
+
+</body>
+
+</html>

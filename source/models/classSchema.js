@@ -1,16 +1,16 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var classSchema = new Schema({
+var ClassSchema = new Schema({
     title: {
         type: String,
         required: true
     },
-    description:{
-        type: String,
-       required: true
+    description: String,
+    completed: {
+        type: Boolean,
+        default: false
     }
 });
 
-
-module.exports = mongoose.model("Class", classSchema);
+module.exports = mongoose.model("clas", ClassSchema);

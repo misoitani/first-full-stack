@@ -1,1 +1,45 @@
-<h2>{{leaveComment}}</h2>
+
+
+
+   <div class="row">
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="col-sm-9" ng-repeat="clas in leaveCommentService.classList track by $index">
+                <div class="panel panel-default">
+<!--{{clas}}-->
+                    <div class="panel-heading">
+                        <h3 class="panel-title" ng-class="{ 'completed text-muted' : clas.completed }" ng-hide="clas.editing">{{ clas.title }}</h3>
+                        <input type="text" class="form-control" ng-show="clas.editing" ng-model="clas.title">
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label ng-class="{ 'completed text-muted' : clas.completed }" ng-hide="clas.editing">
+                                <input type="checkbox" ng-model="clas.completed" ng-change="completeClass(clas, $index)"> {{ clas.description }}
+                            </label>
+                            <textarea type="text" class="form-control" ng-show="clas.editing" ng-model="clas.description"></textarea>
+                            <button class="btn btn-danger btn-lg glyphicon glyphicon-trash pull-right" ng-click="deleteClass(clas, $index)"></button>
+                            <button class="btn btn-warning btn-lg glyphicon glyphicon-pencil pull-right" ng-click="clas.editing = true" ng-hide="clas.editing"></button>
+                            <button class="btn btn-primary btn-lg glyphicon glyphicon-floppy-disk pull-right" ng-click="updateClass(clas, $index)" ng-show="clas.editing"></button>
+                            <button class="btn btn-success btn-lg glyphicon glyphicon-fire pull-right" ng-click="clas.editing = false" ng-show="clas.editing"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <h3>tell us about your school and experience</h3>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title" ng-model="newClass.title">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Description" class="form-control" ng-model="newClass.description"></textarea>
+            </div>
+            <button class="btn btn-primary center-block" ng-click="addClass(newClass)">Add Class</button>
+        </form>
+    </div>
+
+
+</div>

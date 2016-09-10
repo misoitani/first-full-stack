@@ -300,3 +300,8 @@ i.red {
     position: absolute;
     bottom: 27px;
 }*/
+.completed {
+    text-decoration:underline;
+    font-style: italic;
+    color: black;
+}

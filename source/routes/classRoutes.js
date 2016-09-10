@@ -1,36 +1,31 @@
 var express = require("express");
-var mongoose = require("mongoose");
-var Class = require("../models/classSchema");
+var classRoutes = express.Router();
+var Clas = require("../models/classSchema");
 
-var classRoute = express.Router();
-
-
-
-classRoute.route("/")
+classRoutes.route("/")
     .get(function (req, res) {
-        Class.find(function (err, class) {
+        Clas.find(function (err, classes) {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.send(class);
+                res.send(classes);
             }
         });
-
     })
-    .post(function (req, res) {
-        var newClass = new Class(req.body);
-        newClass.save(function (err, savedClass) {
+    .post(function(req, res) {
+        var newClass = new Clas(req.body);
+        newClass.save(function(err, newClassObj) {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.send(savedClass);
+                res.send(newClassObj);
             }
         });
     });
 
-classRoute.route("/:id")
-    .get(function (req, res) {
-        Class.findById(req.params.id, function (err, classObj) {
+classRoutes.route("/:id")
+    .get(function(req, res) {
+        Clas.findById(req.params.id, function(err, classObj) {
             if (err) {
                 res.status(500).send(err);
             } else {
@@ -38,26 +33,28 @@ classRoute.route("/:id")
             }
         });
     })
-    .put(function (req, res) {
-        Class.findByIdAndUpdate(req.params.id, req.body, {
-            new: true
-        }, function (err, updatedclass) {
+    .put(function(req, res) {
+        Clas.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, updatedClass) {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.send(updatedclass);
+                res.send(updatedClass);
             }
-        });
+        })
     })
-    .delete(function (req, res) {
-        //var classID = req.params.id;
-        Votes.findOneAndRemove(req.params.id, function (err, deletedClass) {
+    .delete(function(req, res) {
+        Clas.findByIdAndRemove(req.params.id, function(err, deletedClass) {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.send(deletedClass);
+                var responseObj = {
+                    success: true,
+                    message: "Successfully deleted the class",
+                    class: deletedClass
+                };
+                res.send(responseObj);
             }
         });
     });
 
-module.exports = classRoute;
+module.exports = classRoutes;
